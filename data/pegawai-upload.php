@@ -151,6 +151,26 @@ if(isset($post_submit)){
 				$r2->cost_ctr	= $cost_ctr;
 				$id2 = R::store( $r2 );
 			}
+
+      $jumlah_cost_ctr = R::count('costctr',"id_cost_ctr=?",[$id_cost_ctr]);
+			if($jumlah_cost_ctr < 1){
+				$r2 = R::dispense('costctr');
+				$r2->id_cost_ctr= $id_cost_ctr;
+				$r2->cost_ctr	= $cost_ctr;
+				$id2 = R::store( $r2 );
+			}
+
+      $jumlah_user = R::count('user',"nip=?",[$nip]);
+      if($jumlah_user < 1){
+				$r3 = R::dispense('user');
+				$r3->nip      = $nip;
+        $r3->username	= $nip;
+        $r3->password	= md5($nip);
+        $r3->level  	= 'User';
+				$r3->role   	= '1,11';
+				$id3 = R::store( $r3 );
+			}
+
 			R::commit();
 
 		}catch (Exception $e){

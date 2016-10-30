@@ -29,6 +29,7 @@
 		if ($page=="home") include "lib/dashboard-css.php";
 		else include "lib/view-css.php";
 	?>
+	<link rel="icon" href="/admumpln/assets/img/favicon.ico" type="image/x-icon" />
 </head>
 <body>
 	<!-- begin #page-loader -->
@@ -48,6 +49,7 @@
 			if ($page == "pendidikan") include "pendidikan.php";
 			if ($page == "satpam") include "satpam.php";
 			if ($page == "pkl") include "pkl.php";
+			if ($page == "user") include "user.php";
 
 		?>
 		<!-- begin scroll to top btn -->

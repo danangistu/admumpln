@@ -13,12 +13,14 @@
 		$row=R::findOne("user","username='".$username."' AND password='".$password."'");
 		if($row){
 			$_SESSION['admumUName'] = $row['username'];
+			$_SESSION['admumLvl']   = $row['level'];
+			$_SESSION['admumRole']  = $row['role'];
 			$respon = "true";
 		}
 		else $respon = "false";
 	}catch(Exception $e){
 		$respon = $e->getMessage();
 	}
-	
+
 	echo $respon;
 ?>

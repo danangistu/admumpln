@@ -165,6 +165,15 @@
 				$row->birthdate			= $birthdate;
 				$row->tgl_sk			= $tgl_sk;
 				$id = R::store( $row );
+
+				$r3 = R::dispense('user');
+				$r3->nip      = $nip;
+        $r3->username	= $nip;
+        $r3->password	= md5($nip);
+        $r3->level  	= 'User';
+				$r3->role   	= '1,11';
+				$id3 = R::store( $r3 );
+
 				redirect("/admumpln/pegawai/edit/".$id);
 				$_SESSION['admumAlert']='1';
 			}catch (Exception $e){
@@ -203,6 +212,7 @@
 			$id		= $post_submit;
 			$del 	= R::load('pegawai',$id);
 			$fname	= $del['foto'];
+			$nip  	= $del['nip'];
 			if($fname<>'basic.png'){
 				if(file_exists('/admumpln/foto/pegawai/'.$fname)){
 					unlink('/admumpln/foto/pegawai/'.$fname);
@@ -211,6 +221,8 @@
 			try{
 				$row = R::load('pegawai',$id);
 				R::trash($row);
+				$del_user = R::findOne('user',"nip=?",[$nip]);
+				R::trash($del_user);
 				$_SESSION['admumAlert']='1';
 				redirect("/admumpln/pegawai");
 			}catch(Exception $e){

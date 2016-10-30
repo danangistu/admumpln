@@ -304,3 +304,30 @@
     }
   }()
 </script>
+<script>
+  var table;
+  $(document).ready(function() {
+    table = $('#user-data').DataTable( {
+      "order": [[ 3, "asc" ]],
+      scrollX:        true,
+      scrollCollapse: true,
+      fixedColumns:   {
+        leftColumns: 1,
+      },
+      "ajax": "/admumpln/data/user-ajax.php",
+      "autoWidth": false,
+      dom: 'T<"clear">lfrtip',
+      tableTools: {
+        sSwfPath: "/admumpln/assets/plugins/DataTables/swf/copy_csv_xls_pdf.swf"
+      }
+    } );
+  } );
+  var TableManageTableTools = function() {
+    "use strict";
+    return {
+      init: function() {
+        handleDataTableTools()
+      }
+    }
+  }()
+</script>
