@@ -1,0 +1,13 @@
+RewriteEngine On
+RewriteRule ^login$ login.php
+RewriteRule ^login/$ login.php
+RewriteRule ^logout$ logout.php
+RewriteRule ^logout/$ logout.php
+RewriteRule ^([a-zA-Z0-9]+)$ main.php?page=$1
+RewriteRule ^([a-zA-Z0-9]+)/$ main.php?page=$1
+RewriteRule ^([a-zA-Z0-9]+)/([a-zA-Z0-9]+)$ main.php?page=$1&sub=$2
+RewriteRule ^([a-zA-Z0-9]+)/([a-zA-Z0-9]+)/$ main.php?page=$1&sub=$2
+RewriteRule ^([a-zA-Z0-9]+)/([a-zA-Z0-9]+)/([a-zA-Z0-9]+)$ main.php?page=$1&sub=$2&act=$3
+RewriteRule ^([a-zA-Z0-9]+)/([a-zA-Z0-9]+)/([a-zA-Z0-9]+)/$ main.php?page=$1&sub=$2&act=$3
+RewriteRule ^([a-zA-Z0-9]+)/([a-zA-Z0-9]+)/([a-zA-Z0-9]+)/([a-zA-Z0-9]+)$ main.php?page=$1&sub=$2&act=$3&id=$4
+RewriteRule ^([a-zA-Z0-9]+)/([a-zA-Z0-9]+)/([a-zA-Z0-9]+)/([a-zA-Z0-9]+)/$ main.php?page=$1&sub=$2&act=$3&id=$4
