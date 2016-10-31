@@ -23,7 +23,7 @@
 				foreach ($rolemenu as $role):
 			?>
 
-			<?php if ($role == 1) : ?>
+			<?php if ($role == a) : ?>
 				<li <?php if ($page=="home") echo "class='active'"; ?>>
 					<a href="/admumpln/home">
 						<i class="fa fa-laptop"></i>
@@ -31,7 +31,7 @@
 					</a>
 				</li>
 			<?php endif; ?>
-			<?php if ($role == 2) : ?>
+			<?php if ($role == b) : ?>
 				<li class="has-sub <?php if ($page=="pegawai" or $page=="pensiun") echo "active"; ?>">
 					<a href="javascript:;">
 						<b class="caret pull-right"></b>
@@ -45,7 +45,7 @@
 					</ul>
 				</li>
 			<?php endif; ?>
-			<?php if ($role == 3) : ?>
+			<?php if ($role == c) : ?>
 				<li class="has-sub <?php if ($page=="diklat") echo "active"; ?>">
 					<a href="javascript:;">
 						<b class="caret pull-right"></b>
@@ -59,7 +59,7 @@
 					</ul>
 				</li>
 			<?php endif; ?>
-			<?php if ($role == 4) : ?>
+			<?php if ($role == d) : ?>
 				<li class="has-sub <?php if ($page=="talenta") echo "active"; ?>">
 					<a href="javascript:;">
 						<b class="caret pull-right"></b>
@@ -72,7 +72,7 @@
 					</ul>
 				</li>
 			<?php endif; ?>
-			<?php if ($role == 5) : ?>
+			<?php if ($role == e) : ?>
 				<li class="has-sub <?php if ($page=="keluarga") echo "active"; ?>">
 					<a href="javascript:;">
 						<b class="caret pull-right"></b>
@@ -86,7 +86,7 @@
 					</ul>
 				</li>
 			<?php endif; ?>
-			<?php if ($role == 6) : ?>
+			<?php if ($role == f) : ?>
 				<li <?php if ($page=="pendidikan") echo "class='active'"; ?>>
 					<a href="/admumpln/pendidikan">
 						<i class="fa fa-mortar-board"></i>
@@ -94,7 +94,7 @@
 					</a>
 				</li>
 			<?php endif; ?>
-			<?php if ($role == 7) : ?>
+			<?php if ($role == g) : ?>
 				<li class="has-sub <?php if ($page=="pkl") echo "active"; ?>">
 					<a href="/admumpln/pkl">
 						<i class="fa fa-university"></i>
@@ -102,7 +102,7 @@
 					</a>
 				</li>
 			<?php endif; ?>
-			<?php if ($role == 8) : ?>
+			<?php if ($role == h) : ?>
 				<li class="has-sub <?php if ($page=="keamanan" or $page=="satpam") echo "active"; ?>">
 					<a href="javascript:;">
 						<b class="caret pull-right"></b>
@@ -117,7 +117,7 @@
 					</ul>
 				</li>
 			<?php endif; ?>
-			<?php if ($role == 9) : ?>
+			<?php if ($role == i) : ?>
 				<li class="<?php if ($page=="user") echo "active"; ?>">
 					<a href="/admumpln/user">
 						<i class="glyphicon glyphicon-user"></i>
@@ -125,7 +125,7 @@
 					</a>
 				</li>
 			<?php endif; ?>
-			<?php if ($role == 10) : ?>
+			<?php if ($role == j) : ?>
 				<li>
 					<a href="/admumcsr/" target='_blank'>
 						<i class="glyphicon glyphicon-dashboard"></i>
@@ -133,7 +133,7 @@
 					</a>
 				</li>
 			<?php endif; ?>
-			<?php if ($role == 11) : ?>
+			<?php if ($role == k) : ?>
 				<li class="<?php if ($page=="datadiri") echo "active"; ?>">
 					<a href="/admumpln/datadiri">
 						<i class="glyphicon glyphicon-user"></i>
