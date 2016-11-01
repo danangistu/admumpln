@@ -198,7 +198,7 @@
 					$row = R::load('pegawai',$id);
 					$row->foto	= $file;
 					$id = R::store( $row );
-					move_uploaded_file($_FILES["file"]["tmp_name"],"/admumpln/foto/pegawai/".$file);
+					move_uploaded_file($_FILES["file"]["tmp_name"],"../foto/pegawai/".$file);
 					$_SESSION['admumAlert']='1';
 					redirect("/admumpln/pegawai/detail/".$id);
 				} catch (Exception $e){

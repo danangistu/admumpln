@@ -7,10 +7,18 @@
 		header('location:/admumpln/login');
 	}
 	$admumUName	= ucwords($_SESSION['admumUName']);
+	$admumNip	= $_SESSION['admumNip'];
 	if(isset($get_page)) $page = $get_page; else $page = "";
 	if(isset($get_sub)) $sub	= $get_sub; else $sub = "";
 	if(isset($get_act)) $act = $get_act; else $act = "";
 	if(isset($get_id)) $id = $get_id; else $id = "";
+
+	//get foto profil
+	if ($_SESSION['admumNip']=='') $image='basic.png';
+	else{
+		$admumUser 	 = R::getRow("SELECT p.foto FROM pegawai p WHERE p.nip='$admumNip'");
+		$image = $admumUser['foto'];
+	}
 ?>
 <!DOCTYPE html>
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
@@ -50,6 +58,7 @@
 			if ($page == "satpam") include "satpam.php";
 			if ($page == "pkl") include "pkl.php";
 			if ($page == "user") include "user.php";
+			if ($page == "profil") include "profil.php";
 
 		?>
 		<!-- begin scroll to top btn -->

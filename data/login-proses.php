@@ -12,6 +12,7 @@
 	try{
 		$row=R::findOne("user","username='".$username."' AND password='".$password."'");
 		if($row){
+			$_SESSION['admumNip']   = $row['nip'];
 			$_SESSION['admumUName'] = $row['username'];
 			$_SESSION['admumLvl']   = $row['level'];
 			$_SESSION['admumRole']  = $row['role'];

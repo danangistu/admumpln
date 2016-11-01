@@ -34,13 +34,13 @@
 								$role = implode(",", $post_check);
 								$row = R::load('user',$id);
 								$row->username = $post_username;
-								$row->password = $post_password;
+								$row->password = md5($post_password);
 								$row->role     = $role;
 								$id = R::store( $row );
 							}else{
 								$row = R::load('user',$id);
 								$row->username = $post_username;
-								$row->password = $post_password;
+								$row->password = md5($post_password);
 								$id = R::store( $row );
 							}
 							$_SESSION['admumAlert']='1';

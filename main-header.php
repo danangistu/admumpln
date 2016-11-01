@@ -64,14 +64,14 @@
 			</li>
 			<li class="dropdown navbar-user">
 				<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
-					<img src="/admumpln/assets/img/user-13.jpg" alt="" />
+					<img src="/admumpln/foto/pegawai/<?php echo $image ?>" alt="" />
 					<span class="hidden-xs"><?php echo $admumUName; ?></span> <b class="caret"></b>
 				</a>
 				<ul class="dropdown-menu animated fadeInLeft">
 					<li class="arrow"></li>
-					<li><a href="javascript:;">Edit Profile</a></li>
+					<li><a href="/admumpln/profil">Edit Profile</a></li>
 					<li class="divider"></li>
-					<li><a href="/admumpln/logout/">Log Out</a></li>
+					<li><a href="/admumpln/logout">Log Out</a></li>
 				</ul>
 			</li>
 		</ul>
