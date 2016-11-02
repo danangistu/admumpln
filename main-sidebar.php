@@ -21,7 +21,7 @@
 			<?php
 				$rolemenu = explode(',',$_SESSION['admumRole']);
 			?>
-			<?php if (key_exists('a', $rolemenu)) : ?>
+			<?php if (in_array('a', $rolemenu)) : ?>
 				<li <?php if ($page=="home") echo "class='active'"; ?>>
 					<a href="/admumpln/home">
 						<i class="fa fa-laptop"></i>
@@ -29,7 +29,7 @@
 					</a>
 				</li>
 			<?php endif; ?>
-			<?php if (key_exists('b', $rolemenu)) : ?>
+			<?php if (in_array('b', $rolemenu)) : ?>
 				<li class="has-sub <?php if ($page=="pegawai" or $page=="pensiun") echo "active"; ?>">
 					<a href="javascript:;">
 						<b class="caret pull-right"></b>
@@ -43,7 +43,7 @@
 					</ul>
 				</li>
 			<?php endif; ?>
-			<?php if (key_exists('c', $rolemenu)) : ?>
+			<?php if (in_array('c', $rolemenu)) : ?>
 				<li class="has-sub <?php if ($page=="diklat") echo "active"; ?>">
 					<a href="javascript:;">
 						<b class="caret pull-right"></b>
@@ -57,7 +57,7 @@
 					</ul>
 				</li>
 			<?php endif; ?>
-			<?php if (key_exists('d', $rolemenu)) : ?>
+			<?php if (in_array('d', $rolemenu)) : ?>
 				<li class="has-sub <?php if ($page=="talenta") echo "active"; ?>">
 					<a href="javascript:;">
 						<b class="caret pull-right"></b>
@@ -70,7 +70,7 @@
 					</ul>
 				</li>
 			<?php endif; ?>
-			<?php if (key_exists('e', $rolemenu)) : ?>
+			<?php if (in_array('e', $rolemenu)) : ?>
 				<li class="has-sub <?php if ($page=="keluarga") echo "active"; ?>">
 					<a href="javascript:;">
 						<b class="caret pull-right"></b>
@@ -84,7 +84,7 @@
 					</ul>
 				</li>
 			<?php endif; ?>
-			<?php if (key_exists('f', $rolemenu)) : ?>
+			<?php if (in_array('f', $rolemenu)) : ?>
 				<li <?php if ($page=="pendidikan") echo "class='active'"; ?>>
 					<a href="/admumpln/pendidikan">
 						<i class="fa fa-mortar-board"></i>
@@ -92,7 +92,7 @@
 					</a>
 				</li>
 			<?php endif; ?>
-			<?php if (key_exists('g', $rolemenu)) : ?>
+			<?php if (in_array('g', $rolemenu)) : ?>
 				<li class="has-sub <?php if ($page=="pkl") echo "active"; ?>">
 					<a href="/admumpln/pkl">
 						<i class="fa fa-university"></i>
@@ -100,7 +100,7 @@
 					</a>
 				</li>
 			<?php endif; ?>
-			<?php if (key_exists('h', $rolemenu)) : ?>
+			<?php if (in_array('h', $rolemenu)) : ?>
 				<li class="has-sub <?php if ($page=="keamanan" or $page=="satpam") echo "active"; ?>">
 					<a href="javascript:;">
 						<b class="caret pull-right"></b>
@@ -115,7 +115,7 @@
 					</ul>
 				</li>
 			<?php endif; ?>
-			<?php if (key_exists('i', $rolemenu)) : ?>
+			<?php if (in_array('i', $rolemenu)) : ?>
 				<li class="<?php if ($page=="user") echo "active"; ?>">
 					<a href="/admumpln/user">
 						<i class="glyphicon glyphicon-user"></i>
@@ -123,7 +123,7 @@
 					</a>
 				</li>
 			<?php endif; ?>
-			<?php if (key_exists('j', $rolemenu)) : ?>
+			<?php if (in_array('j', $rolemenu)) : ?>
 				<li>
 					<a href="/admumcsr/" target='_blank'>
 						<i class="glyphicon glyphicon-dashboard"></i>
@@ -131,7 +131,7 @@
 					</a>
 				</li>
 			<?php endif; ?>
-			<?php if (key_exists('k', $rolemenu)) : ?>
+			<?php if (in_array('k', $rolemenu)) : ?>
 				<li class="<?php if ($page=="datadiri") echo "active"; ?>">
 					<a href="/admumpln/datadiri">
 						<i class="glyphicon glyphicon-user"></i>

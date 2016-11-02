@@ -13,7 +13,7 @@ function redirect($url){
 
 function authorize($page, $rolemenu, $page_key, $key, $include){
   if ($page == $page_key) {
-    if (key_exists($key,$rolemenu))
+    if (in_array($key,$rolemenu))
       include $include;
     else
       include "./not-authorize.php";
