@@ -10,4 +10,13 @@ while (list($key,$val)=each($_POST)){
 function redirect($url){
 	header('location:'.$url);
 }
+
+function authorize($page, $rolemenu, $page_key, $key, $include){
+  if ($page == $page_key) {
+    if (key_exists($key,$rolemenu))
+      include $include;
+    else
+      include "./not-authorize.php";
+  }
+}
 ?>

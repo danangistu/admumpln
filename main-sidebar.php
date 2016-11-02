@@ -20,10 +20,8 @@
 			<li class="nav-header">Navigation</li>
 			<?php
 				$rolemenu = explode(',',$_SESSION['admumRole']);
-				foreach ($rolemenu as $role):
 			?>
-
-			<?php if ($role == 'a') : ?>
+			<?php if (key_exists('a', $rolemenu)) : ?>
 				<li <?php if ($page=="home") echo "class='active'"; ?>>
 					<a href="/admumpln/home">
 						<i class="fa fa-laptop"></i>
@@ -31,7 +29,7 @@
 					</a>
 				</li>
 			<?php endif; ?>
-			<?php if ($role == 'b') : ?>
+			<?php if (key_exists('b', $rolemenu)) : ?>
 				<li class="has-sub <?php if ($page=="pegawai" or $page=="pensiun") echo "active"; ?>">
 					<a href="javascript:;">
 						<b class="caret pull-right"></b>
@@ -45,7 +43,7 @@
 					</ul>
 				</li>
 			<?php endif; ?>
-			<?php if ($role == 'c') : ?>
+			<?php if (key_exists('c', $rolemenu)) : ?>
 				<li class="has-sub <?php if ($page=="diklat") echo "active"; ?>">
 					<a href="javascript:;">
 						<b class="caret pull-right"></b>
@@ -59,7 +57,7 @@
 					</ul>
 				</li>
 			<?php endif; ?>
-			<?php if ($role == 'd') : ?>
+			<?php if (key_exists('d', $rolemenu)) : ?>
 				<li class="has-sub <?php if ($page=="talenta") echo "active"; ?>">
 					<a href="javascript:;">
 						<b class="caret pull-right"></b>
@@ -72,7 +70,7 @@
 					</ul>
 				</li>
 			<?php endif; ?>
-			<?php if ($role == 'e') : ?>
+			<?php if (key_exists('e', $rolemenu)) : ?>
 				<li class="has-sub <?php if ($page=="keluarga") echo "active"; ?>">
 					<a href="javascript:;">
 						<b class="caret pull-right"></b>
@@ -86,7 +84,7 @@
 					</ul>
 				</li>
 			<?php endif; ?>
-			<?php if ($role == 'f') : ?>
+			<?php if (key_exists('f', $rolemenu)) : ?>
 				<li <?php if ($page=="pendidikan") echo "class='active'"; ?>>
 					<a href="/admumpln/pendidikan">
 						<i class="fa fa-mortar-board"></i>
@@ -94,7 +92,7 @@
 					</a>
 				</li>
 			<?php endif; ?>
-			<?php if ($role == 'g') : ?>
+			<?php if (key_exists('g', $rolemenu)) : ?>
 				<li class="has-sub <?php if ($page=="pkl") echo "active"; ?>">
 					<a href="/admumpln/pkl">
 						<i class="fa fa-university"></i>
@@ -102,7 +100,7 @@
 					</a>
 				</li>
 			<?php endif; ?>
-			<?php if ($role == 'h') : ?>
+			<?php if (key_exists('h', $rolemenu)) : ?>
 				<li class="has-sub <?php if ($page=="keamanan" or $page=="satpam") echo "active"; ?>">
 					<a href="javascript:;">
 						<b class="caret pull-right"></b>
@@ -117,7 +115,7 @@
 					</ul>
 				</li>
 			<?php endif; ?>
-			<?php if ($role == 'i') : ?>
+			<?php if (key_exists('i', $rolemenu)) : ?>
 				<li class="<?php if ($page=="user") echo "active"; ?>">
 					<a href="/admumpln/user">
 						<i class="glyphicon glyphicon-user"></i>
@@ -125,7 +123,7 @@
 					</a>
 				</li>
 			<?php endif; ?>
-			<?php if ($role == 'j') : ?>
+			<?php if (key_exists('j', $rolemenu)) : ?>
 				<li>
 					<a href="/admumcsr/" target='_blank'>
 						<i class="glyphicon glyphicon-dashboard"></i>
@@ -133,7 +131,7 @@
 					</a>
 				</li>
 			<?php endif; ?>
-			<?php if ($role == 'k') : ?>
+			<?php if (key_exists('k', $rolemenu)) : ?>
 				<li class="<?php if ($page=="datadiri") echo "active"; ?>">
 					<a href="/admumpln/datadiri">
 						<i class="glyphicon glyphicon-user"></i>
@@ -141,8 +139,6 @@
 					</a>
 				</li>
 			<?php endif; ?>
-
-			<?php endforeach; ?>
 
 			<!-- begin sidebar minify button -->
 			<li><a href="javascript:;" class="sidebar-minify-btn" data-click="sidebar-minify"><i class="fa fa-angle-double-left"></i></a></li>

@@ -47,17 +47,18 @@
 	<!-- begin #page-container -->
 	<div id="page-container" class="fade page-sidebar-fixed page-header-fixed">
 		<?php
+			$rolemenu = explode(',',$_SESSION['admumRole']);
 			require_once "main-header.php";
 			require_once "main-sidebar.php";
-			if ($page == "home") include "dashboard.php";
-			if ($page == "pegawai") include "pegawai.php";
-			if ($page == "pensiun") include "pensiun.php";
-			if ($page == "diklat") include "diklat.php";
-			if ($page == "talenta") include "talenta.php";
-			if ($page == "pendidikan") include "pendidikan.php";
-			if ($page == "satpam") include "satpam.php";
-			if ($page == "pkl") include "pkl.php";
-			if ($page == "user") include "user.php";
+			authorize($page, $rolemenu, 'home', 'a', 'dashboard.php');
+			authorize($page, $rolemenu, 'pegawai', 'b', 'pegawai.php');
+			authorize($page, $rolemenu, 'pensiun', 'b', 'pensiun.php');
+			authorize($page, $rolemenu, 'diklat', 'c', 'diklat.php');
+			authorize($page, $rolemenu, 'talenta', 'd', 'talenta.php');
+			authorize($page, $rolemenu, 'pendidikan', 'f', 'pendidikan.php');
+			authorize($page, $rolemenu, 'pkl', 'g', 'pkl.php');
+			authorize($page, $rolemenu, 'satpam', 'h', 'satpam.php');
+			authorize($page, $rolemenu, 'user', 'i', 'user.php');
 			if ($page == "profil") include "profil.php";
 
 		?>
