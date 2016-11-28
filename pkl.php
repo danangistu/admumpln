@@ -76,6 +76,7 @@
 									<th >Tanggal Selesai</th>
 									<th >Lokasi</th>
 									<th >Mentor</th>
+									<th >Status</th>
 									<th >Action</th>
 								</tr>
 							</thead>
